@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/gpio_ws/devel
+
+Name: print_lcd
+Description: Description of print_lcd
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

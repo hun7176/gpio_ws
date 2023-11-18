@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/gpio_ws/install
+
+Name: endanger_buzzer
+Description: Description of endanger_buzzer
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

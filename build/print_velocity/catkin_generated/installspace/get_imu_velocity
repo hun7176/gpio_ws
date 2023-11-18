@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+import rospy
+import math
+from sensor_msgs.msg import Imu
+from std_msgs.msg import UInt32
+class Vel:
+    def __init__(self):
+        self.vel_pub=rospy.Publisher('/detect/velocity', UInt32, queue_size=1)
+        self.sub_imu=rospy.Subscriber('imu', Imu, self.calculate)
+
+    def calculate(msg):
+        rospy.loginfo("find PM's velocity")
+        # V=V0+1/2at^
+        self.t=rospy.get_time()
+        self.x=msg.linear_acceleration.x
+        self.y=msg.linear_acceleration.y
+        self.a=math.sqrt(x*x+y*y)
+        self.v=past_v+(1/2)*a*(t-past_t)*(t-past_t)
+        past_t=self.t
+        past_v=self.v
+        self.vel_pub.publish(self.v)
+
+rospy.init_node("get_imu_velocity")
+rospy.loginfo("get_imu_velocity : node started..")
+vel=Vel()
+rospy.spin()

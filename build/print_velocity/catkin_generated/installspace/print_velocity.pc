@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/gpio_ws/install
+
+Name: print_velocity
+Description: Description of print_velocity
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

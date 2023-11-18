@@ -1,0 +1,2 @@
+endanger_buzzer:print_velocity
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/gpio_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/gpio_ws/install -G Unix Makefiles

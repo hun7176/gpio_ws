@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="print_velocity" type="get_imu_velocity" name="get_imu_velocity" output="screen"/>
+  <node pkg="print_velocity" type="print_lcd" name="print_lcd" output="screen"/>
+  <node pkg="endanger_buzzer" type="endanger_buzzer" name="endanger_buzzer" output="screen"/>
+</launch>
